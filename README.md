@@ -13,32 +13,30 @@ print("Hello " + Name)
 
 #Excersise 3,
 #length of room
-length = int(input("Enter the length "))
+length = float(input("Enter the length "))
 #Height of room
-Height = int(input("Enter the height "))
+Height = float(input("Enter the height "))
 #Find Area of room
 Area = (length * Height)
 #Area of room
-print(Area)
+print(f"The area is {Area} m^2 squared")
 
 #Excersise 4,
 #length of farm in feets
-length = int(input("Enter the length "))
+length = float(input("Enter the length "))
 #Height of farm in feets
-Height = int(input("Enter the height "))
+Height = float(input("Enter the height "))
 #Find Area of farm in feets
 Area = (length * Height)
 #Area of farm in acre
-print(Area / 43560 )
+print(f'The area is {Area / 43560} acre' )
 
-Excersise 5, 
+#Excersise 5, 
 #find amount of liters in container
-container = float(input("enter the amount "))
+bottles_le_1lt = int(input("Bottles not greater than 1 liter: "))
+bottles_ge_1lt = int(input("Bottles greater than 1 liter:"))
 
-#deposit when container < 1 liter  
-if container < 1:
-        print("0.10$ deposit")
-#deposit when container > 1 liter
-elif container > 1:
-        print("0.25$ deposit")
+refund = (bottles_le_1lt * 0.10) + (bottles_ge_1lt * 0.25)
+final_refund = "{:.2f}".format(refund)
+print(f'You get an amount of ${final_refund} for your containers')
 
